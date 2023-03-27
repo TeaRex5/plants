@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Пример верстки светлой и темной темы одновременно</title>
+	<style>
+		/* Общие стили для всех тем */
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+			font-weight: 600;
+			line-height: 1.2;
+		}
+
+		p {
+			margin: 0 0 20px 0;
+			line-height: 1.5;
+		}
+
+		/* Стили для светлой темы */
+		.light {
+			background-color: #fff;
+			color: #333;
+		}
+
+		.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+			color: #333;
+		}
+
+		.light p {
+			color: #555;
+		}
+
+		/* Стили для темной темы */
+		.dark {
+			background-color: #333;
+			color: #fff;
+		}
+
+		.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+			color: #fff;
+		}
+
+		.dark p {
+			color: #ccc;
+		}
+
+	</style>
+</head>
+<body class="light">
+	<div class="container">
+		<h1>Пример верстки светлой и темной темы одновременно</h1>
+		<p>Это пример верстки, которая имеет светлую и темную темы одновременно. Вы можете переключать темы, используя кнопки ниже.</p>
+		<button onclick="setLightTheme()">Светлая тема</button>
+		<button onclick="setDarkTheme()">Темная тема</button>
+		<p>В этом примере мы используем два класса стилей: <code>.light</code> и <code>.dark</code>. Оба класса имеют общие стили для всех элементов, но определяют цвет фона и цвет текста для светлой и темной тем соответственно.</p>
+		<p>Также мы добавили две функции JavaScript, которые позволяют переключать темы при нажатии кнопок.</p>
+	</div>
+
+	<script>
+		function setLightTheme() {
+			document.body.classList.remove('dark');
+			document.body.classList.add('light');
+		}
+
+		function setDarkTheme() {
+			document.body.classList.remove('light');
+			document.body.classList.add('dark');
+		}
+	</script>
+</body>
+</html>
